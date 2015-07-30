@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ 
+		<Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/previous"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_media_play" 
+        android:text="@string/pause" />
+    <SeekBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/previous"
+        android:layout_alignLeft="@+id/SeekBar1"
+        android:layout_alignRight="@+id/SeekBar1"
+        android:layout_marginBottom="18dp" 
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+         android:maxHeight="2dp"
+          android:thumb="@drawable/playing_slider_thumb"
+            android:progressDrawable="@drawable/seekbars"
+             />
+    
+
+  
+		<Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/SeekBar1"
+        android:layout_alignTop="@+id/play"
+        android:layout_marginRight="20dp"
+        android:src="@android:drawable/ic_media_next" 
+        android:text= "@string/downplay"/>
+ 
+		<Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/SeekBar1"
+        android:layout_alignLeft="@+id/SeekBar1"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="28dp"
+        android:src="@android:drawable/ic_media_previous"
+        android:text= "@string/onplay" />
+		
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+     <!--     <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ini"
+            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+        
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/progressBar1"
+        android:layout_below="@id/topBar"
+        android:background="#C1C1C1" >
+        <TextView 
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/songinfo"  
+            android:textSize="55sp"
+            android:textColor="#00FF00" /> 
+            </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/SeekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+
+        />
+
+    <TextView
+        android:id="@+id/beginTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/previous"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:hint="@string/music_current"
+        android:textSize="12sp" 
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/beginTime"
+        android:layout_alignRight="@+id/progressBar1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:hint="@string/music_current" 
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+ 
+       
+</RelativeLayout>

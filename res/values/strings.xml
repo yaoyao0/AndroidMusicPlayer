@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">musicPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="songinfo">songInformation</string>
+    <string name="ini">0/0</string>
+ 	<string name="music_current">00:00</string>
+
+</resources>
